@@ -1,0 +1,209 @@
+/* Fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(0, 0%, 95%);
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.9375rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 75%;
+  min-height: 31.25rem;
+  overflow: hidden;
+}
+
+.img-container {
+  margin: 2rem 2rem 0rem 2rem;
+}
+
+.col-heading {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  color: hsl(0, 0%, 95%);
+  text-transform: uppercase;
+  font-size: 2.25rem;
+  margin: 1.5rem 2rem 0rem 2rem;
+}
+
+.col-description {
+  width: 75%;
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.7;
+  margin: 1rem 4rem 0rem 2rem;
+  padding-bottom: 10rem;
+}
+
+.col-btn {
+  font-family: 'Lexend Deca', sans-serif;
+  background: hsl(0, 0%, 95%);
+  border: none;
+  border-radius: 100px;
+  padding: 1rem 2rem 1rem 2rem;
+  margin: 2rem 2rem 0rem 2rem;
+}
+
+#sedans {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+#luxury {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+#sedans-btn a {
+  color: hsl(31, 77%, 52%);
+}
+
+#suvs-btn a {
+  color: hsl(184, 100%, 22%);
+}
+
+#luxury-btn a {
+  color: hsl(179, 100%, 13%);
+  margin-top: 0.75rem;
+  /* Margin hack because I'm unsure why this button is down further. I know it's because of the paragraph being longer, but I'm not sure how I could fix this. */
+}
+
+#sedans {
+  background: hsl(31, 77%, 52%);
+}
+
+#suvs {
+  background: hsl(184, 100%, 22%);
+}
+
+#luxury {
+  background: hsl(179, 100%, 13%);
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #sedans-btn,
+  #suvs-btn {
+    margin-bottom: 2rem;
+  }
+
+  #luxury-btn {
+    margin-top: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #sedans-btn,
+  #suvs-btn {
+    margin-bottom: 2rem;
+  }
+
+  #luxury-btn {
+    margin-top: 1.75rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .col-container {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .col-description {
+    font-size: 1rem;
+    padding-bottom: 0;
+    margin-bottom: 1rem;
+  }
+
+  .col {
+    max-height: 440px;
+  }
+
+  .col-btn {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  #sedans {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+  }
+
+  #luxury {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .col-container {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .col-description {
+    font-size: 1rem;
+    padding-bottom: 0;
+    margin-bottom: 1rem;
+  }
+
+  .col {
+    max-height: 440px;
+  }
+
+  .col-btn {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  #sedans {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+  }
+
+  #luxury {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+}
